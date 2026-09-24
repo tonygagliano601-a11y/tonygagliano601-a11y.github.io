@@ -1,0 +1,15 @@
+# ==========================================
+# VAULTMEDIA SECURITY CORE ROBOTS COMPLIANCE
+# ==========================================
+
+User-agent: *
+Allow: /index.html
+Allow: /assets/
+
+# Block crawlers from looking at internal testing or database configs
+Disallow: /dev/
+Disallow: /config/
+Disallow: /private/
+
+# Point search engines directly to the architectural blueprint
+Sitemap: https://vaultmediasecurity.com
