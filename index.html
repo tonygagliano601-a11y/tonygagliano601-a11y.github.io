@@ -3,269 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VaultMedia Security | Pre-Release Asset Protection</title>
+    <title>Infrastructure Defense & Cyber Auditing | VaultMedia Security Colorado Springs</title>
+    <meta name="description" content="VaultMedia Security is a veteran-led cyber loss-prevention firm in Colorado Springs hardening perimeters for general contractors and trade subs to drop underwriting claims to zero.">
+    
+    <!-- EMBEDDED HIGH-CONTRAST TECH-NOIR DESIGN SYSTEMS -->
     <style>
         :root {
-            --obsidian: #0B0C10;
-            --charcoal: #1F2833;
-            --cyan: #66FCF1;
-            --white: #FFFFFF;
-            --gray: #C5C6C7;
+            --bg-primary: #0A0F1D;
+            --bg-secondary: #111A2E;
+            --accent-glow: #00F0FF;
+            --accent-dim: #00A3FF;
+            --text-main: #FFFFFF;
+            --text-muted: #8F9CAE;
+            --alert-red: #FF3B30;
         }
-
+        
         body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--obsidian);
-            color: var(--white);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 2px solid var(--accent-dim);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .logo-accent {
+            color: var(--accent-glow);
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        header {
+        .hero-section {
             text-align: center;
-            padding: 60px 0 40px 0;
-            border-bottom: 1px solid var(--charcoal);
+            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            margin-bottom: 40px;
         }
 
-        .logo-text {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: 6px;
-            color: var(--white);
-            margin: 0;
+        h1 {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            color: var(--text-main);
         }
 
-        .tagline {
-            color: var(--cyan);
-            font-size: 0.95rem;
-            letter-spacing: 3px;
+        .hero-subtitle {
+            color: var(--accent-glow);
+            font-size: 18px;
+            font-weight: 600;
             text-transform: uppercase;
-            margin-top: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
         }
 
-        .intro {
-            text-align: center;
-            font-size: 1.15rem;
-            color: var(--gray);
+        /* SHOWROOM VISUALIZATION GRID RESERVATION PLACEHOLDER */
+        .visualization-block {
+            background-color: var(--bg-secondary);
+            border: 2px solid var(--accent-dim);
+            box-shadow: 0 0 20px rgba(0, 163, 255, 0.2);
+            border-radius: 6px;
+            min-height: 450px;
             margin: 40px 0;
-            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            position: relative;
+            overflow: hidden;
         }
 
-        .services-grid {
+        .visualization-fallback {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .grid-layout {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
-        }
-
-        @media (min-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            margin-top: 40px;
         }
 
         .card {
-            background-color: var(--charcoal);
+            background-color: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 3px solid var(--accent-dim);
             padding: 30px;
-            border-radius: 4px;
-            border-left: 3px solid var(--cyan);
+            border-radius: 6px;
         }
 
-        .card h3 {
+        .card h2, .card h3 {
+            color: var(--accent-glow);
             margin-top: 0;
-            font-size: 1.25rem;
-            letter-spacing: 1px;
-            color: var(--white);
-            text-transform: uppercase;
         }
 
-        .card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin: 60px 0;
-            padding: 40px;
-            background: linear-gradient(135deg, var(--charcoal) 0%, #111a24 100%);
-            border-radius: 4px;
-        }
-
-        .cta-section h2 {
-            margin-top: 0;
-            letter-spacing: 2px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--cyan);
-            color: var(--obsidian);
-            text-decoration: none;
-            padding: 15px 35px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 4px;
-            margin-top: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.03);
+        p {
+            color: var(--text-muted);
+            font-size: 16px;
         }
 
         footer {
+            background-color: var(--bg-secondary);
             text-align: center;
-            color: #555;
-            font-size: 0.85rem;
-            margin-top: 80px;
-            letter-spacing: 1px;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
         }
     </style>
+
+    <!-- START VAULTMEDIA LOCAL SEO SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "VaultMedia Security",
+      "image": "https://vaultmediasecurity.com",
+      "url": "https://vaultmediasecurity.com",
+      "telephone": "719-309-6439",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Downtown Colorado Springs",
+        "addressLocality": "Colorado Springs",
+        "addressRegion": "CO",
+        "postalCode": "80903",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.8339,
+        "longitude": -104.8214
+      },
+      "areaServed": [
+        "Colorado Springs",
+        "El Paso County",
+        "Front Range"
+      ],
+      "knowsAbout": [
+        "Cybersecurity Auditing",
+        "Construction Risk Mitigation",
+        "NIST SP 800-171 Compliance",
+        "CMMC 2.0 Framework Guidance",
+        "Splunk Log Analysis"
+      ]
+    }
+    </script>
+    <!-- END VAULTMEDIA LOCAL SEO SCHEMA MARKUP -->
 </head>
 <body>
 
+    <header>
+        <div class="logo-text">VAULT<span class="logo-accent">MEDIA</span> SECURITY</div>
+        <div style="color: var(--accent-glow); font-weight: 700; letter-spacing: 1px;">LABS ACTIVE</div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1 class="logo-text">VAULTMEDIA</h1>
-            <div class="tagline">Enterprise Asset Insulation & Specialized Cyber Architecture</div>
-            <!-- VaultMedia Enterprise Fork Gateways -->
-<div class="gateway-container" style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
-    <a href="#music" class="btn-cyan" style="background-color: transparent; border: 2px solid #66FCF1; color: #FFFFFF; padding: 15px 30px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif;">
-        🎙️ ENTER MUSIC & ENTERTAINMENT DIVISION
-    </a>
-    <a href="#industrial" class="btn-cyan" style="background-color: transparent; border: 2px solid #66FCF1; color: #FFFFFF; padding: 15px 30px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif;">
-        🏗️ ENTER INDUSTRIAL & CONSTRUCTION DIVISION
-    </a>
-</div>
-
-        </header>
-<!-- ========================================== -->
-<!-- VAULTMEDIA INDUSTRIAL & CONSTRUCTION SECTION -->
-<!-- ========================================== -->
-<section id="industrial" style="background-color: #0B0C10; color: #FFFFFF; padding: 60px 20px; font-family: 'Montserrat', sans-serif; max-width: 1200px; margin: 0 auto; border-top: 1px solid #1F2833;">
-    
-    <!-- Section Header -->
-    <div style="text-align: center; margin-bottom: 50px;">
-        <h2 style="color: #66FCF1; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 10px;">VAULTMEDIA INFRASTRUCTURE DEFENSE</h2>
-        <p style="color: #C5C6C7; font-size: 1.2rem; font-style: italic;">B2B Risk Insulation & Revenue Protection for General Contractors and Subcontractors</p>
-    </div>
-
-    <!-- Core Vulnerability Grid -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
         
-        <!-- Threat Card 1 -->
-        <div style="background-color: #1F2833; padding: 30px; border-left: 4px solid #66FCF1; border-radius: 4px;">
-            <h3 style="color: #66FCF1; margin-top: 0; font-size: 1.4rem;">🛑 Invoice & Wire Fraud Insulation</h3>
-            <p style="color: #C5C6C7; line-height: 1.6; font-size: 0.95rem;">
-                Threat actors aggressively target commercial construction billing teams using advanced browser session hijacking. By harvesting active desktop cookies, hackers silently access contractor email communication threads to inject fraudulent banking routing data straight onto active, multi-thousand-dollar supplier invoices—redirecting material capital before the breach is ever spotted.
+        <!-- HERO SECTION HARDENED FOR SCOUTS AND CRAWLERS -->
+        <section class="hero-section">
+            <div class="hero-subtitle">VETERAN-LED RISK INSULATION</div>
+            <h1>VETERAN-LED CONSTRUCTION CYBERSECURITY AND LOSS PREVENTION FOR CO SPRINGS BUILDERS</h1>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 18px;">
+                We bridge advanced technical systems engineering with real-world blue-collar business logic to defend accounts payable and safeguard underwriting margins.
             </p>
-        </div>
-
-        <!-- Threat Card 2 -->
-        <div style="background-color: #1F2833; padding: 30px; border-left: 4px solid #66FCF1; border-radius: 4px;">
-            <h3 style="color: #66FCF1; margin-top: 0; font-size: 1.4rem;">🏗️ Blueprint & System Ransomware Defenses</h3>
-            <p style="color: #C5C6C7; line-height: 1.6; font-size: 0.95rem;">
-                A total job-site shutdown caused by encrypted project management servers or locked blueprint access logs creates massive completion delays that trigger severe liquidation penalties from contract developers. We build completely isolated data vaults and containerized repository mirrors to guarantee your field assets stay online.
-            </p>
-        </div>
-
-        <!-- Threat Card 3 -->
-        <div style="background-color: #1F2833; padding: 30px; border-left: 4px solid #66FCF1; border-radius: 4px;">
-            <h3 style="color: #66FCF1; margin-top: 0; font-size: 1.4rem;">📡 Remote Field Trailer Hardening</h3>
-            <p style="color: #C5C6C7; line-height: 1.6; font-size: 0.95rem;">
-                Distributed job trailers and mobile site supervisors routinely connect to core corporate accounting ledgers using unencrypted commercial hot spots and unmanaged personal terminals. We build secure, zero-trust whitelisted perimeters to insulate your edge connections across all active build sectors.
-            </p>
-        </div>
-    </div>
-
-    <!-- Engagement Tier Frameworks -->
-    <div style="background-color: #1F2833; padding: 40px; border-radius: 4px; text-align: center; margin-bottom: 40px;">
-        <h3 style="color: #FFFFFF; font-size: 1.8rem; margin-top: 0; margin-bottom: 30px;">Corporate Retention & Consulting Modules</h3>
-        
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-            <!-- Tier 1 Summary -->
-            <div style="background-color: #0B0C10; padding: 25px; width: 280px; border-radius: 4px; border: 1px solid #1F2833;">
-                <h4 style="color: #66FCF1; margin-top: 0;">1. Digital Perimeter Audit</h4>
-                <p style="color: #C5C6C7; font-size: 0.85rem; line-height: 1.5;">Comprehensive diagnostic inspection of cloud storage visibility, corporate credential leakage, and subcontractor permissions mapping.</p>
-            </div>
-            <!-- Tier 2 Summary -->
-            <div style="background-color: #0B0C10; padding: 25px; width: 280px; border-radius: 4px; border: 1px solid #1F2833;">
-                <h4 style="color: #66FCF1; margin-top: 0;">2. Continuous Infrastructure Shield</h4>
-                <p style="color: #C5C6C7; font-size: 0.85rem; line-height: 1.5;">24/7 background traffic analysis logging, quarterly subcontractor ACL hardening, script compliance automation, and a rapid 2-hour SLA response window.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Call to Action Input Portal Link -->
-    <div style="text-align: center; margin-top: 40px;">
-        <p style="color: #C5C6C7; margin-bottom: 20px;">Protect your project margins. Secure your operational pipeline lines today.</p>
-        <a href="mailto:tony@://vaultmediasecurity.com: Infrastructure Perimeter Audit Request" style="background-color: #66FCF1; color: #0B0C10; padding: 15px 40px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border-radius: 4px; display: inline-block;">
-            📥 SCHEDULE COMPLIMENTARY 15-MINUTE DIGITAL PERIMETER AUDIT
-        </a>
-    </div>
-
-</section>
-
-        <section class="intro">
-            We provide absolute wealth insurance for independent record labels, boutique talent managers, and elite media houses by securing pre-release rollout pipelines and locking down digital masters.
         </section>
 
-        <div class="services-grid">
-            <div class="card">
-                <h3>01 / Pre-Release Vault Hardening</h3>
-                <p>We build secure, containerized repository perimeters around your audio stems. By enforcing strict least-privilege directories and hardened server environments, your intellectual property remains unhackable before distribution.</p>
+        <!-- COMMAND STUDIO 2.0 INTERFACE DISPLAY PANEL -->
+        <div class="visualization-block">
+            <div class="visualization-fallback">
+                <div style="font-size: 48px; margin-bottom: 10px;">📡</div>
+                <div style="font-weight: 800; color: #FFF; letter-spacing: 2px;">COMMAND STUDIO 2.0 INTERFACE</div>
+                <div style="color: var(--accent-glow); font-family: monospace; font-size: 14px; margin-top: 5px;">
+                    [ STATUS: SYSTEM RENDERING REAL-TIME TELEMETRY WAVES ]
+                </div>
             </div>
-
-            <div class="card">
-                <h3>02 / Inbound Communication Triage</h3>
-                <p>We deploy automated Python-driven gatekeeper blocks to screen incoming contract pitches and collaboration attachments. Threat actors using infostealer malware are intercepted before crossing your corporate device boundaries.</p>
-            </div>
-
-            <div class="card">
-                <h3>03 / Log Monitoring & SIEM Analytics</h3>
-                <p>Continuous cloud directory tracking backed by strict risk metrics. We log web server traffic and directory queries directly into centralized Splunk engines, triggering real-time response alerts on structural anomalies.</p>
-            </div>
-
-            <div class="card">
-                <h3>04 / Retainer Asset Architecture</h3>
-                <p>Predictable monthly infrastructure protection covering your active release calendar. No hourly consulting traps—just pure corporate continuity to ensure your masters flow safely to streaming registries.</p>
-            </div>
+            <!-- Your existing Splunk/JavaScript canvas hooks plug directly into this structural block -->
         </div>
 
-        <section class="cta-section">
-            <h2>PROTECT YOUR ROLLOUT REVENUE</h2>
-            <p style="color: var(--gray);">Schedule a complimentary 15-minute infrastructure risk audit for your active roster.</p>
-            <a href="mailto:tony@vaultmediasecurity.com" class="cta-button">Initiate Audit Scan</a>
-        </section>
-         <footer>
-            © 2026 VAULTMEDIA SECURITY. ALL RIGHTS RESERVED. FOUNDER & PRINCIPAL ARCHITECT OPERATIONS.
-                <footer>
-            <div style="color: var(--cyan); letter-spacing: 2px; font-weight: 600; margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase;">
-                [ 📁 VAULT IDENTITY METRICS ]
+        <!-- SEO AND COMMERCIAL VALUE GRID SECTORS -->
+        <main class="grid-layout">
+            
+            <div class="card">
+                <h2>Insulating the Front Range Construction Supply Chain</h2>
+                <p>
+                    Based right here in El Paso County, we operate as an outsourced technical loss-prevention arm for independent commercial lines insurance brokers and mid-market general contractors. We protect the localized builders driving our community infrastructure.
+                </p>
             </div>
-            <p style="color: var(--gray); font-size: 0.9rem; margin: 5px 0; letter-spacing: 1px;">
-                OPERATIONS // REGIONAL HEADQUARTERS: DOWNTOWN COLORADO SPRINGS, CO
-            </p>
-            <p style="color: var(--gray); font-size: 0.9rem; margin: 5px 0; letter-spacing: 1px;">
-                SECURE OUTBOUND GATEWAY: tony@vaultmediasecurity.com
-            </p>
-            <div style="color: #444; font-size: 0.75rem; margin-top: 25px; letter-spacing: 1px;">
-                © 2026 VAULTMEDIA SECURITY SYSTEMS. ALL INTELLECTUAL PROPERTY DEPLOYMENTS RESERVED. 
-                <br>AUTHENTICATED STATIC SOURCE VIA GITHUB PAGES // ENDPOINT ENCRYPTED SECURE FRAME.
+
+            <div class="card">
+                <h3>Eliminating Invoice Wire Fraud & Underwriting Friction</h3>
+                <p>
+                    With Colorado tracking as the #1 most at-risk state in the nation for business cyber extortion, standard IT support is no longer enough. We deploy continuous SAT-SYNC volumetric pulse tracking via Splunk Enterprise to compress your external attack surface by up to 90%.
+                </p>
+                <p>
+                    Our customized boundary shields completely neutralize the session token exploits and malicious redirection plays that lead to devastating, six-figure invoice wire fraud losses.
+                </p>
             </div>
-        </footer>
+
+            <div class="card">
+                <h3>Federal Framework & Cyber Liability Qualification</h3>
+                <p>
+                    We specialize explicitly in transforming vulnerable subcontractors into clean, writeable risks that easily satisfy strict CISA, NIST SP 800-171, and CMMC 2.0 underwriting requirements. 
+                </p>
+                <p>
+                    By running high-velocity diagnostic sweeps and issuing verified Risk Clearance Profiles, we save policy renewals, fast-track commercial packages, and drive portfolio claim frequencies straight to zero.
+                </p>
+            </div>
+
+        </main>
 
     </div>
+
+    <footer>
+        &copy; 2026 VaultMedia Security LLC. All Rights Reserved. Operating Natively in Colorado Springs, CO. <br>
+        <span style="color: var(--accent-glow); font-family: monospace; font-size: 12px; margin-top: 10px; display: inline-block;">
+            SECURE PERIMETER DATA HOUSING // VETERAN OWNED
+        </span>
+    </footer>
 
 </body>
 </html>
